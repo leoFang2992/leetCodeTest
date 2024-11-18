@@ -10,7 +10,7 @@
  * @return {number}
  */
 var nthUglyNumber = function(n) {
-    
+    //动态规划
 };
 // @lc code=end
 
