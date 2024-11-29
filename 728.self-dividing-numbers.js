@@ -12,14 +12,15 @@
  */
 var selfDividingNumbers = function(left, right) {
     //1. loop 暴力计算
+    let res = [];
     for( let i = left; i <= right; i++  ) {
-        let res = [];
+        
         if ( isSelfDividing(i) ) {
             res.push(i);
         }
     }
     return res;
-}
+};
 
 const isSelfDividing = (num) => {
     let temp = num;
