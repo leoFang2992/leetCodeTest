@@ -12,11 +12,21 @@
 var findNthDigit = function(n) {
     //
     let res = 0;
-    let temp = "";
-    for (let i = 1; i <= n; i++) {
-        temp += i; 
+
+    let len = 1;
+    let start = 1;
+    let end = 9;
+    while ( n > len * end ) {
+        n = n - len * end;
+        len ++;
+        start *= 10;
+        end *= 10 
     }
-    res += temp[n-1]; 
+    let num  =  start + Math.floor( (n-1)/len )
+    num = num.toString();
+    res = Number(num[ (n-1)%len ]);
+    return res;
+
 };
 // @lc code=end
 
